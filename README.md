@@ -2,7 +2,7 @@
 
 [![Generic badge](https://img.shields.io/badge/Compact%20Toolchain-0.30.0-1abc9c.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/midnight--js-4.0.2-blueviolet.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/wallet--sdk--facade-3.0.0-blue.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/Tests%20Cases%20Passed-30-green.svg)](https://shields.io/)
 
-> A DiceRoll contract demo that records every roll on Midnight.
+> A DiceRoll contract demo that records every roll on Midnight. This project is built on the Midnight Network.
 
 This project demonstrates how to derive dice outcomes from entropy, call the contract, and present a clean UI that reflects on-chain state in real time.
 
