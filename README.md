@@ -149,5 +149,3 @@ Showcasing privacy-preserving computation and verifiable execution.
 ## Author
 
 [Kali-Decoder](https://github.com/Kali-Decoder)
-# Midnight-Dice-Roll
-# Midnight-Dice-Roll

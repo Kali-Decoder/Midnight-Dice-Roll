@@ -1,0 +1,42 @@
+pragma language_version >= 0.20;
+import CompactStandardLibrary;
+
+export ledger last_die_one: Uint<8>;
+export ledger last_die_two: Uint<8>;
+export ledger last_total: Uint<8>;
+export ledger roll_count: Uint<32>;
+export ledger die_one_history: Map<Uint<32>, Uint<8>>;
+export ledger die_two_history: Map<Uint<32>, Uint<8>>;
+export ledger total_history: Map<Uint<32>, Uint<8>>;
+export ledger nonce: Counter;
+
+constructor() {
+  last_die_one = 1;
+  last_die_two = 1;
+  last_total = 2;
+  roll_count = 0;
+}
+
+export circuit roll_dice(die_one_value: Uint<8>, die_two_value: Uint<8>): [] {
+  const d1 = disclose(die_one_value);
+  const d2 = disclose(die_two_value);
+
+  assert(d1 >= 1, "Die one must be at least 1");
+  assert(d1 <= 6, "Die one must be at most 6");
+  assert(d2 >= 1, "Die two must be at least 1");
+  assert(d2 <= 6, "Die two must be at most 6");
+
+  const total = (d1 + d2) as Uint<8>;
+  const next_roll_id = (roll_count + 1) as Uint<32>;
+
+  last_die_one = d1;
+  last_die_two = d2;
+  last_total = total;
+  roll_count = disclose(next_roll_id);
+
+  die_one_history.insert(disclose(next_roll_id), disclose(d1));
+  die_two_history.insert(disclose(next_roll_id), disclose(d2));
+  total_history.insert(disclose(next_roll_id), disclose(total));
+
+  nonce.increment(1);
+}
