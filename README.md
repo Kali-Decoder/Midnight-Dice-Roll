@@ -8,6 +8,9 @@ This project demonstrates how to derive dice outcomes from entropy, call the con
 
 ---
 
+![Uploading Screenshot 2026-04-03 at 4.28.19 PM.png…]()
+
+
 ## What this demonstrates
 
 This project focuses on **verifiable on-chain roll history**:
