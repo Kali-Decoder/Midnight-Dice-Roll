@@ -8,7 +8,8 @@ This project demonstrates how to derive dice outcomes from entropy, call the con
 
 ---
 
-![Uploading Screenshot 2026-04-03 at 4.28.19 PM.png…]()
+<img width="1284" height="1031" alt="Screenshot 2026-04-03 at 4 28 19 PM" src="https://github.com/user-attachments/assets/b58d9d53-9ef2-44dc-968c-dfc77f8405ee" />
+
 
 
 ## What this demonstrates
